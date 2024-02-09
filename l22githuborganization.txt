@@ -1,0 +1,189 @@
+=> Github Organizations 
+
+Github > dltaccount > profilepicture > Click "Your Organization"
+click "New organization"
+click "Create a free organization"
+
+=Set up your orgnization 
+Organization account name = dltorganization 
+Contact email = datalandtechnology@gmail.com
+This organization belongs to: = My personal account 
+check = I hereby accept the Terms of Service. FOr more information about Github's privacy practices. see the Git Click "Next" 
+
+= Add Organization members 
+Github > dltaccount > progilepicture > Click "Your Organizations"
+Click "dltorganization"
+Click "People" > "Invite member"
+Search - "tinhtutaungdlt"
+click "invite"
+choose "member" Click "Sent invitation" 
+
+=>Accept invitationcheck email and accept 
+
+github > dltaccount  > "Your Repositories" > Click "new
+
+cd lesson3 
+mkdir githublesson8 
+cd githublesson8 
+
+git init 
+git remote add origin 
+git remote -v 
+
+touch file0.txt 
+Edit : write down 
+1.this is the first line 
+2.this is the second line 
+
+cat file0.txt 
+
+git status 
+git add * 
+git commit -m "file 0 added"
+git status 
+git push -u origin master 
+
+0:24:51
+
+
+
+
+=Transferring a Repositories to the Organization 
+github > dltaccount > "Your Repositories" > githublesson8 > settings 
+Click "Transfer ownership" > "Transfer" 
+New owner = Select one of my organizations = dltorganization 
+Click "I understand, Transfer this repository 
+
+=Create New Repositories in dltorganization 
+Github > dltaccount > progilepicture > Click "Your Organizations"
+Click "dltorganiation" > "New repository" 
+Repository name = githublesson9 
+
+
+
+=>Test Lesson9 
+cd lesson3 
+mkdir githublesson9
+cd githublesson9
+
+git init 
+git remote add origin 
+git remote -v
+
+touch file0.txt 
+
+vim file0.txt
+Edit : write down 
+1.this is the first comment 
+2.this is the second comment 
+
+cat file0.txt 
+
+git status 
+git add * 
+git commit -m "file 0 added"
+git status 
+git push -u origin master 
+
+=Update from kotha to dltorganization > githublesson9 
+Click file0.txt 
+Edit : Write down 
+1.this is the first comment 
+2.this is the second comment 
+3.this is the third comment 
+
+Noted :: needed pull request cuz kotha is a member 
+Noted :: needed merge from dltaccount 
+
+=Update from dlt to dltorganization > githublesson9 
+Click file0.txt 
+Edit : Write down 
+1.this is the first comment 
+2.this is the second comment 
+3.this is the third comment 
+4.this is the fourth comment 
+
+Noted :: no needed pull request cuz dlt is a owner 
+
+
+23OG
+
+git push -u origin new-action 
+git push -u upstream new-action 
+
+
+=>Create new file from org by dlt github 
+dltaccount > Your organization > dltorganization > Repositories > githublesson8 > Click "operation branch" > 
+file2.txtWrite down : 1.this is the first comment 
+2.this is the second comment 
+
+
+git fetch upstream 
+#here we can check asap !!! no need to re-create branch again cuz upstream/operation was unit name, anyway we dont't 
+git checkout operation 
+(or)
+git checkout -b operation upstream/operation 
+git branch -a 
+git pull 
+
+
+
+=>Create new file from org by dlt github 
+kotha > Your organization > dltorganization > Repositories > githublesson8 > Click "operation branch" > 
+file2.txt
+Write down : 1.this is the first react 
+             2.this is the second react 
+
+
+git checkout master 
+git branch 
+git fetch upstream 
+git checkout operation 
+git pull 
+ls 
+
+
+git checkout master 
+ls  
+git pull
+(or) 
+git pull origin master --rebase 
+
+
+=>Remote URL Remove & re-add 
+
+= Method 1
+git remote -v 
+git config remote.upstream.url git@github.....git 
+git remote -v 
+
+= Method 2 
+git remote -v 
+git remote set-url upstream gitgithub.com....git 
+git remote -v 
+
+=>Remote URL Remove 
+git remote remove upstream 
+git remote -v 
+
+git remote add myorg git@github.com....git 
+git remote -v 
+
+git branch -a 
+git fetch myorg 
+git branch -a 
+git checkout -b shared myorg/shared 
+git branch 
+
+-----------------------------------------
+
+31OG
+
+
+7TM
+
+
+
+
+
+

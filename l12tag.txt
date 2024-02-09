@@ -1,0 +1,645 @@
+=>Git Tag 
+(i)Lightweight Tags - A Name Only 
+(ii)Annotated Tags - Allows you to add messages explaining the tag 
+
+(i)Lightweight
+git tag tagname 
+
+(ii)Annotated 
+git tag -a tagname -m "message" 
+(or)
+git tag -a tagname
+
+=>Delete
+git tag --delete tagname 
+or 
+git tag -d tagname 
+
+
+=>List 
+git tag 
+(or)
+git tag --list 
+
+
+
+git tag mytag 
+git tag yourtag 
+git tag --list (or) git tag
+git log --all --oneline 
+git tag --delete mytag
+git tag -d yourtag 
+git tag --list (or) git tag
+git log --all --oneline
+
+
+
+mkdir lesson12 
+
+git init 
+
+touch file0.txt 
+
+vim file0.txt 
+Edit : write down
+Before Version 1.0
+1.this is the first line
+2.this is the second line 
+
+cat file0.txt 
+
+git add .
+git commit -m "file 0 added" 
+
+git status 
+git branch 
+git log 
+
+git tag v1.0
+
+git tag 
+
+git status
+git branch 
+git log 
+
+git show v1.0
+
+
+
+touch file1.txt 
+touch file2.txt
+
+vim file1.txt 
+Edit : write down 
+After Version 1.0
+1.this is the first comment 
+2.this is the second comment 
+
+vim file2.txt 
+Edit write down 
+Before Version 1.0
+1.this is the first post 
+2.this is the second post 
+
+git status 
+git status -s
+git add .
+git commit -m "file 1 2 added"
+
+git status 
+git branch 
+git log
+
+
+git tag v1.1 
+
+git tag 
+
+git status
+git branch 
+git log 
+
+git tag --list 
+
+git show v1.0
+git show v1.1 
+
+git diff v1.0 v1.1
+
+vim file0.txt 
+Edit : write down 
+Before Version 1.0 
+3.this is the third line 
+4.this is the fourth line 
+
+vim file2.txt 
+Edit write down 
+Before Version 1.0
+3.this is the third post 
+4.this is the fourth post 
+
+git add * 
+git commit -m "M 0 2"
+
+git tag v1.2 
+
+git tag 
+
+git status 
+git branch 
+git log 
+
+git show v1.0 
+git show v1.1 
+git show v1.2 
+
+git diff v1.0  v1.2 
+
+
+
+HERE 
+
+(To see note)
+git tag -n
+
+touch file3.txt 
+touch file4.txt
+
+vim file3.txt 
+Edit : write down 
+After Version 1.3
+1.this is the first share 
+2.this is the second share 
+
+vim file4.txt 
+Edit : write down 
+After Version 1.3
+1.this is the first react 
+2.this is the second react 
+
+git status 
+git status -s 
+
+git add .
+git commit -m "file 3 4 added"
+
+git status 
+git branch 
+git log
+
+git tag -a  v1.3
+edit:
+this new update of the version  1.3 
+thank you 
+#sample comment 
+
+git tag 
+
+git status 
+git branch 
+git log 
+
+git show v1.3 
+
+git tag -n 
+
+(note edit)
+git tag -a v1.3 -f 
+Edit: 
+in this case  ! we added file 3 and 4 
+
+git tag -n 
+
+git tag -a v1.0 -f
+Edit: 
+in this case ! we added file 0
+
+git tag -n 
+
+touch file5.txt 
+
+vim file5.txt 
+Edit : write down 
+After Version 1.3 
+1.this is the first save 
+2.this is the second save 
+
+git add .
+git commit -m "file 5 added" 
+
+git status
+git branch 
+git log 
+
+git tag -a v1.4 -m "in this case ! we added file 5" 
+
+git tag --list 
+
+git log 
+
+
+17GT
+
+
+git show v1.0
+
+git log --all --oneline 
+
+git show v1.1 
+
+git tag -a v1.5 a298edb 
+edit : this is new version v1.5 
+
+git tag -n 
+git log --all --oneline 
+
+=>Change tag to new commit 
+git tag -a v1.5 -f fbec620
+edit : this is new version v1.5 for file 0 added 
+git log --all --oneline
+
+
+git show v1.5
+
+git log --all --oneline 
+
+git show v1.3 
+git show v1.0 
+
+
+
+
+
+
+------------------------
+
+
+
+=>Brand working with Remote Repository 
+
+cd githublesson 
+mkdir lesson3 
+cd lesson3 
+mkdir githublesson6
+cd githublesson6
+
+git init 
+git status 
+git remote add origin git@github.com:MyaEiSan/githublesson5.git
+git remote -v
+
+=Add New File from PC 
+touch file0.txt 
+ls 
+echo "Hello i am file0" > file0.txt 
+cat file0.txt 
+git status 
+git add file0.txt 
+git commit -m "A file0 from pc" 
+git status 
+
+git branch 
+git branch bugfix 
+git branch 
+
+git push -u origin main
+
+=>Switch 
+git checkout bugfix 
+git branch 
+git status 
+
+
+vim file0.txt 
+Write down : i already bug fixed; 
+
+cat file0.txt 
+git status 
+git add file0.txt 
+git commit -m "M file0 bugfixed" 
+git status 
+git file0.txt 
+
+
+git checkout main 
+git branch 
+git status 
+cat file0.tx 
+
+git checkout bugfix 
+git branch 
+git status 
+cat file0.txt 
+
+=>Push Local branch to Remote Repository 
+git push -u origin bugfix 
+
+
+=>Merge Git Branch to main 
+git checkout main 
+git branch 
+git status 
+cat file0.txt
+git merge bugfix 
+
+git status 
+git add file0.txt 
+git commit -m "Merge file0 bugfix to main"
+git push -u origin main 
+
+=>Rename Branch for Local & Remote 
+
+git branch 
+git checkout main 
+git branch 
+
+git branch -m bugfix codefix 
+git branch 
+
+
+=Delete the old branch on remote 
+
+git push -u origin --delete bugfix 
+or 
+git push -u origin -d bugfix 
+or 
+git push -u origin -D bugfix
+or 
+git push -u origin :bugfix 
+
+git checkout codefix 
+git branch 
+touch file1.txt
+vim file1.txt 
+ls 
+write down: Hello i am file1 
+git status 
+git add * 
+git commit -m "A file1 from terminal"
+git status 
+git push -u origin codefix 
+
+
+=>Merge Git Branch to main 
+git checkout main 
+git branch 
+git status 
+git merge codefix 
+ls 
+
+
+git status 
+git add * 
+git commit -m "Merge file1 codefix to main"
+git push -u origin main 
+
+
+---------------------------------
+
+git tag v1.0 
+git tag 
+or 
+git tag --list 
+git status 
+git log
+
+
+touch file2.txt 
+ls 
+echo "Hello i am file2 after v1.0" > file2.txt 
+cat file2.txt 
+git status
+git add file2.txt
+git commit -m "A file2 from pc"
+git status 
+
+git branch 
+git tag --list 
+git status 
+git log 
+
+git push -u origin main
+git push -u origin v1.0 
+
+git tag v2.0 
+git tag 
+or 
+git tag --list 
+git status 
+git log 
+
+git push -u origin v2.0 
+
+=>Rename Tag for Local & Remote 
+git tag --list 
+git log 
+
+=>Local (clone -> old delete)
+git tag (new) (old)
+= Clone
+git tag v1.1 v1.0 
+v1.0 နဲ့ ပုံစံတူ v1.1 ထပ်တိုးလာမှာ 
+git branch 
+git log 
+= Delete 
+git tag -d v1.0
+git tag --list
+git log 
+
+= Update to Remote Repository 
+new :old 
+git push -u origin v1.1 :v1.0 
+v1.0 ကို ဖျက်ပြီး v1.0 နဲ့ ပုံစံတူ v1.1 ကို ထည့်မှာ 
+
+
+---------------------------------
+
+=> Create & Manage Branch/Tag From Github 
+
+cd lesson3 
+cd githublesson7 
+git status 
+git checkout main 
+git status 
+git branch 
+git checkout bugfix // error: pathspec 'bugfix' ....
+
+github > datalandtechnology > Repository > githublesson7b > branch > Click "New branch" 
+bugfix branch ရဲ့ source က main
+stable branch ရဲ့ source က main
+Note: talking about source 
+developer branch ရဲ့ source က new-feature 
+
+git status 
+git branch 
+git checkout bugfix //error: pathspec 'bugfix' did .....
+
+ဒီအချိန်မှာ bugfix ဆိုတဲ့ branch က မရှိလို့ error တက်မှာ github ပေါ်က update မှန်သမျှ pull လုပ်ချင်ရင် 
+
+git pull origin 
+
+branch တွေ အကုန်လုံးတော့ ပြမှာ မဟုတ်ဘူး ကိုယ်လိုချင်တဲ့ ဟာကို ခေါ်သုံးလို့တော့ရသွားမယ် 
+
+git status 
+git branch 
+git checkout bugfix // no error 
+git status 
+git branch 
+ls 
+git checkout stable 
+git branch 
+ls 
+git checkout developer 
+git branch 
+ls 
+cat file2.txt 
+
+
+=>Tag 
+
+git status 
+git checkout main 
+git log 
+git tag --list 
+
+github > datalandtechnology > Repository > githublesson7b > tags > Click "Create ne releases" > choose a tag 
+
+v1.0  and write description(optional)
+
+create a new tag 
+
+branch ကိုလည်း ကိုယ်ကြိုက်ရာ တွဲလို့ရတယ် 
+
+lorem ထဲက စာပိုက် တစ်ပိုက် (optional)
+
+Publish release 
+
+git status 
+git tag --list 
+git pull origin 
+git status 
+git log 
+git tag --list 
+
+--------------------------------------------
+
+
+
+
+
+
+
+
+
+=>Delete the old branch on remote 
+
+git push -u origin --delete bugfix 
+or 
+git push -u origin -d bugfix 
+or 
+git push -u origin -D bugfix
+or 
+git push -u origin :bugfix 
+
+
+
+
+git checkout -b new-feature 
+git branch 
+
+touch file1.txt 
+ls 
+echo "Hello i am file1" > file1.txt 
+cat file1.txt 
+git status 
+git add file1.txt 
+git commit -m "A file1 from pc" 
+git status 
+
+git checkout main 
+git branch 
+ls 
+cat file0.txt 
+git status 
+
+
+git push -u origin main // Terminal Message = Everything up-to-date
+git push -u origin new-feature  // can push from main for new-feature 
+
+
+git branch 
+git status 
+ls
+git merge new-feature 
+ls 
+cat file0.txt 
+cat file1.txt  
+
+git status 
+git add *
+git commit -m "Merge file1 newfeature to main"
+git push -u origin main 
+
+
+git checkout bugfix 
+git branch 
+ls 
+touch file2.txt 
+ls 
+echo "Hello i am bugfix file2" > file2.txt 
+cat file2.txt 
+git status 
+git add file2.txt 
+git commit -m "A file2 from pc" 
+git status 
+git push -u origin bugfix 
+
+
+=>Remote Repository merge to Local Repository 
+dlt ? Click "Compare & Pull request" 
+write down title = A file2 from pc 
+write down description = I want to merge fiel 2 from web 
+Click "Create pull request" 
+
+Click "Pull request" Tag 
+Click "A file2 from pc" 
+Click "Merge pull request" 
+Click "Confirm merge" 
+
+git checkout main 
+ls 
+git pull origin 
+ls 
+
+=>Rename Branch 
+git branch
+git checkout new-feature 
+git branch -m my-feature 
+git branch 
+
+--------------Not OKI for Remote Repository--------------
+touch file3.txt 
+ls 
+write down: Hello i am file3 
+git status 
+git add * 
+git commit -m "A file3 from terminal" 
+git status 
+git push -u origin my-feature 
+---------------------------------------------------------
+
+=>Rename Branch for Local & Remote 
+
+git branch
+git checkout bugfix 
+git branch 
+
+git branch -m bugfix codefix  (or) git branch -m codefix 
+git branch 
+
+
+=Delete the old branch on remote 
+
+-u က မထည့်လည်းရ
+
+git push -u origin --delete bugfix 
+or 
+git push -u origin -d bugfix 
+or 
+git push -u origin -D bugfix
+or 
+git push -u origin :bugfix  
+
+git branch 
+touch file4.txt 
+ls 
+write down: Hello i am file4 
+git status 
+git add * 
+git commit -m "A file4 from terminal"
+git status 
+git push -u origin codefix 
+
+
+----------------------------------------

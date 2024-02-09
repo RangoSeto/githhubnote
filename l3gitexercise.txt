@@ -1,0 +1,119 @@
+git --version 
+
+=>Set Local user name and email 
+git config --local user.name 'dlt'
+git config --local user.email "admin@gmail.com'
+
+git config --local user.name 
+git config --local user.email 
+
+=>Check List all Variables 
+git config -l 
+git config -l --show-origin 
+
+=>Remove List All Variables 
+git config --local --unset user.name 
+git config --local --unset user.email 
+
+git config --local user.name 
+git config --local user.email 
+
+git config -l --show-origin 
+
+
+git init lesson1 
+
+cd lesson1 
+
+=>Check Folder Dir
+for window = dir 
+for linux = ls 
+for linux = ls -la (or) ls -al
+
+git status 
+
+=>Set Default Branch
+git config --global init.defaultBranch  main 
+
+for linux = vim lesson1.txt 
+for linux = i > esc > :wq  
+
+=>Check Folder Dir 
+for window = dir 
+for linux = ls 
+for linux = ls -la (or) ls -al 
+
+git status 
+
+git add lesson1.txt 
+
+git status
+
+             git add             git commit                 git push
+working area   ->    staging area   ->     local repository   ->   remote repository(github, gitlab)
+
+git commit -m "adding lesson1"
+
+git status 
+
+git log 
+
+=>Create New Branch 
+git branch new-feature 
+
+=>Check All Branch List 
+git branch 
+
+git log
+
+
+for linux = vim lesson1.txt 
+for linux = i > esc > :wq 
+
+git status 
+
+vim lesson2.txt 
+
+for linux = vim lesson1.txt 
+for linux = i > esc > :wq 
+
+git status 
+
+=>Change Default Branch 
+git checkout new-feature 
+git status 
+
+git add lesson1.txt 
+
+git status 
+
+git commit -m "add 2 countries lesson1.txt"
+
+git status 
+
+git log
+
+git add lesson2.txt
+
+git status 
+
+git commit -m "adding lesson2.txt"
+
+git status 
+
+for window = dir 
+for linux = ls 
+
+cat lesson1.txt = to read lesson1.txt file, we can view content in lesson1.txt
+cat lesson2.txt = to read lesson2.txt file , we can view content in lesson2.txt
+
+
+git checkout main 
+
+git status 
+
+ls
+
+cat lesson1.txt 
+
+ls

@@ -1,0 +1,377 @@
+mkdir lesson7 
+cd lesson7 
+
+git init 
+git status 
+
+
+touch file0.txt 
+ls 
+echo "my first project" > file0.txt 
+cat file0.txt
+git status 
+git add file0.txt 
+git commit -m "added file0"
+git status 
+
+.git folder ကို ဖျက်ချင်ရင် 
+rm -rf .git 
+ပြီးရင် အဲဒီ directory ထဲက file တွေကို ဖျက်ချင်ရင် 
+rm * 
+
+touch file1.txt 
+ls 
+echo "welcome to our site" > file1.txt 
+cat file1.txt 
+git status 
+git add file1.txt 
+git status
+ls 
+
+Note:: *** git stash လုပ်ဖို့ရာ အနည်းဆုံး ရှေ့မှာ commit တစ်ခုရှိရမယ် အဲဒီcommit နောက်ပိုင်းမှာမ git stash နဲ့ ဝှက်ထားလို့ရမယ်။ git stash မလုပ်ခင်  git add လုပ်ရမယ် ပြီးမှသာ git stash လုပ်လို့ရမှာ ***
+
+git stash 
+git status 
+ls 
+git stash list 
+
+Note::stash@{0}: WIP on master: 3bb9a33 added file0
+added file0 ဆိုတဲ့ commit နောက်ပိုင်းမှ ရှိလာတဲ့ stash လို့ပြောတာ 
+
+
+13ST
+
+touch file2.txt 
+ls 
+
+echo "thanks for visit" > file2.txt 
+ls 
+cat file2.txt 
+
+
+git add *  
+
+git status
+ls 
+
+git stash 
+git status 
+ls 
+git stash list 
+
+
+touch file3.txt 
+ls 
+
+echo "please click the share button" > file3.txt 
+ls 
+cat file3.txt 
+
+git status 
+ls 
+
+git add file3.txt
+git stash 
+git status
+ls 
+git stash list 
+
+touch file4.txt 
+ls 
+
+echo "please click the like button" > file4.txt 
+ls 
+cat file4.txt 
+
+git status 
+ls 
+
+git add file4.txt 
+git stash 
+git status
+ls 
+git stash list 
+
+ls 
+git status
+
+=>Pop a single stash state 
+
+Note:: ဝှက်ထားတဲ့ file တစ်ခုချင်စီကို ပြန်ဖော်တာ git stash pop က ၊ ပြီးတော့ git stash list ထဲကနေလည်း တစ်ခါတည်း ဖျက်ပေးသွားတယ် 
+
+git stash pop 
+git status 
+git stash list 
+
+
+git stash pop 
+git status 
+git stash list 
+
+git stash show
+
+Note:: git stash show က အခု git stash pop ရိုက်လိုက်ရင် ဘယ် file ပေါ် လာမလဲဆိုတာ ကြည့်ချင်ရင်သုံးတာ 
+
+git stash pop 
+git status 
+git stash list 
+
+git stash show
+
+git stash pop 
+git status 
+git commit -m "add file 1 2 3 4"
+git stash list 
+git status 
+ls 
+git stash list 
+
+--------------------------
+
+
+
+mkdir lesson8
+cd lesson8
+
+git init 
+git status 
+
+
+touch file0.txt 
+ls 
+echo "my first project" > file0.txt 
+cat file0.txt
+git status 
+git add file0.txt 
+git commit -m "added file0"
+git status 
+
+.git folder ကို ဖျက်ချင်ရင် 
+rm -rf .git 
+ပြီးရင် အဲဒီ directory ထဲက file တွေကို ဖျက်ချင်ရင် 
+rm * 
+
+touch file1.txt 
+ls 
+echo "welcome to our site" > file1.txt 
+cat file1.txt 
+git status 
+git add file1.txt 
+git status
+ls 
+
+Note:: *** git stash လုပ်ဖို့ရာ အနည်းဆုံး ရှေ့မှာ commit တစ်ခုရှိရမယ် အဲဒီcommit နောက်ပိုင်းမှာမ git stash နဲ့ ဝှက်ထားလို့ရမယ်။ git stash မလုပ်ခင်  git add လုပ်ရမယ် ပြီးမှသာ git stash လုပ်လို့ရမှာ ***
+
+git stash 
+git status 
+ls 
+git stash list 
+
+Note::stash@{0}: WIP on master: 3bb9a33 added file0
+added file0 ဆိုတဲ့ commit နောက်ပိုင်းမှ ရှိလာတဲ့ stash လို့ပြောတာ 
+
+
+13ST
+
+touch file2.txt 
+ls 
+
+echo "thanks for visit" > file2.txt 
+ls 
+cat file2.txt 
+
+
+git add file2.txt
+
+git status
+ls 
+
+git stash 
+git status 
+ls 
+git stash list 
+
+
+touch file3.txt 
+ls 
+
+echo "please click the share button" > file3.txt 
+ls 
+cat file3.txt 
+
+git status 
+ls 
+
+git add file3.txt
+git stash 
+git status
+ls 
+git stash list 
+
+touch file4.txt 
+ls 
+
+echo "please click the like button" > file4.txt 
+ls 
+cat file4.txt 
+
+git status 
+ls 
+
+git add file4.txt 
+git stash 
+git status
+ls 
+git stash list 
+
+ls 
+git status
+
+=>Apply Stash state 
+
+Note::git stash apply က stash လုပ်ထားတဲ့ file ကို ဖော်ပေးတယ် ဒါပေမယ့် stash list ကနေတော့ drop လုပ်မပေးဘူး 
+တစ်ခါပဲ ဖော်ပေးမှာ နောက်ထပ်ဖော်ချင်ရင်  git stash pop ရိုက်ပြီးမှာ git stash apply ပေးရမှာ 
+
+
+git stash show 
+git stash apply 
+git status 
+git stash list 
+
+git commit -m "added file 4"
+git status 
+ls 
+
+*no result 
+git stash apply 
+git stash list 
+
+git stash pop 
+git stash show
+git stash apply 
+
+git commit -m "added file3" 
+git status 
+ls 
+
+*no result 
+git stash apply 
+git stash list 
+
+git stash pop 
+git stash list
+git stash show 
+git stash apply 
+
+git commit -m "added file 2"
+git status 
+ls 
+
+=>Remove all the Stash 
+
+Note:: stash list ထဲက ဟာတွေကို ဖျက်ချင်ရင် သုံးတာ git stash clear
+
+git stash clear 
+git stash list
+
+--------------------------
+
+mkdir lesson9
+cd lesson9
+
+git init 
+git status 
+
+
+touch file0.txt 
+ls 
+echo "my first project" > file0.txt 
+cat file0.txt
+git status 
+git add file0.txt 
+git commit -m "added file0"
+git status 
+
+
+touch file1.txt 
+touch file2.txt 
+ls 
+
+git status
+git add *
+git status 
+ls 
+
+
+Note:: save "added file 1 2" က မထည့်ရင်  git stash list ကြည့်တဲ့အခါ  stash@{0}: On master: added file 1 2 မှာ added file 1 2 အစား အဲဒီ git stash မရိုက်ခင်က ရှိနေတဲ့ commit ဖြစ်နေမှာ ၊ ကိုယ် ပေးချင်တဲ့ command နဲ့ save တဲ့ သဘော
+
+
+git stash save "added file 1 2" 
+git status 
+ls 
+git stash list
+
+
+
+touch file3.txt 
+touch file4.txt 
+ls 
+
+git status
+git add *
+git status 
+ls 
+
+
+git stash save "added file 3 4" 
+git status 
+ls 
+git stash list
+
+git stash show 
+
+Note::stash@{0} ထည့်တာက အဲဒီ index number မှာ ရှိနေတဲ့ ဟာတွေကို ကြည့်ဖို့ 
+
+git stash show stash@{0}
+git stash show stash@{1}
+
+git stash list 
+
+=>Single Delete Stash 
+
+Note:: index number နဲ့ ဖျက်ချင်တဲ့ ဟာတစ်ခုကို stash list ထဲကနေ ဖျက်တာ 
+
+git stash drop stash@{1}
+
+git stash list
+
+touch file5.txt
+touch file6.txt
+touch file7.txt 
+
+git status
+git add * 
+git status 
+ls 
+
+git stash save "added file 5 6 7" 
+git status 
+ls 
+git stash list 
+
+git stash show stash@{0}
+git stash show stash@{1}
+
+git stash show 
+git stash apply 
+
+git status 
+git add * 
+git commit -m "added file 5 6 7"
+git status 
+
+git stash list 
+git stash clear 
+git stash list 
+
+--------------------------

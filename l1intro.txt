@@ -1,0 +1,29 @@
+
+=>URL
+https://git.scm.com/
+
+
+=>Git Version Check 
+git --version 
+git version 
+
+
+=>Git ? 
+version control system (free and open source) 
+system that's recording every changes to our files 
+recall any specific version 
+it allows many people to easily collaborate a project 
+
+
+=> Git vs Github/Gitlab 
+Git - git is a tool for manage github/lab repositories (can use git without github/lab) 
+    - store versions in project history 
+Github/lab - place where the source code exits (remotely and manage by git)
+           - online service that hosts our project 
+           - share our codes to other developers 
+           - download / collaborate 
+
+=>Important Notes 
+Git - Create repository (Every Project)
+    - Create branch (Every Feature) 
+    - No need to connect remote Repo 

@@ -1,0 +1,36 @@
+=>Working with Team 
+
+dltaccount > Your organizations > dltorganization > Teams > Click "New team" 
+
+Team Name = Developers
+Description = Developers can read & write access to this repository 
+Team visivility = Visible 
+Team notifications = Enabled 
+
+Cick "Create team" 
+
+=> Add New member 
+
+dltaccount > Your organization > dltorganization > Teams > Click "Developers" 
+Click "Add a member"
+Add member to Developers = tinhtutaungdlt 
+Click "Invite" 
+
+
+dltaccount > Your organization > dltorganization > Team > Click "Developers" 
+Click "tinhtutaungdlt" > "dltorganization / githublesson9" > Click "Manage access" 
+Click "Membership privilege Edit" 
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+=> Team Permissions 
+
+dltaccount > Your organization > dltorganization > Team >  Click "Developers" > "Repositories" > Click "Add repository"
+Add repository to Developers = "dltorganization/githublesson9"
+Click "Add repository to team" 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+

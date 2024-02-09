@@ -1,0 +1,138 @@
+=> git 
+
+cd lesson3 
+mkdir githublesson10 
+
+git init
+git remote add origin  git@github.com:MyaEiSan/githublesson10.git
+git remote -v
+
+
+ls -a // hidden ဖြစ်နေတဲ့ file တွေပါ မြင်ရမယ် 
+cd .git 
+cat config 
+cd ..
+
+git config --local user.name "Mya" 
+git config --local user.name 
+git config --local user.email "mayeisan722@gmail.com"
+git config --local user.email
+
+ls -a 
+cd .git 
+cat config 
+cd ..
+
+
+touch file0.txt 
+
+vim file0.txt 
+Edit : write down 
+1.this is the first line 
+2.this is the second line 
+
+cat file0.txt 
+
+git add file0.txt 
+git commit -m "file 0 added" 
+git status 
+git push -u origin main
+
+git branch bugfix 
+git branch dev 
+git branch 
+
+
+ls -add 
+cd .git 
+vim config (linux)
+config --edit [windows]
+i 
+edit  လုပ်မယ်  
+esc :wq
+
+[color "branch"]
+        local=cyan 
+        current=yellow bold 
+
+
+cd ..
+git branch 
+
+Note :: to see color in this link = https://git-scm.com/docs/git-config
+
+---------------------------------------------
+
+=> HEAD file 
+
+cd .git 
+ls 
+cat HEAD //ref: refs/heads/master 
+cd ..
+
+git branch 
+git switch bugfix 
+git branch 
+
+cd .git 
+ls 
+cat HEAD //ref: refs/heads/bugfix 
+cd ..
+
+git checkout main 
+
+---------------------------------------------
+
+=> Refs folder 
+
+git log 
+
+cd .git 
+ls 
+cd refs 
+ls 
+
+cd heads // Note heads ထဲမှာ branch တွေ ရှိနေမှာ 
+ls 
+cat main 
+cat bugfix 
+cat dev 
+
+cd ..
+cd ..
+cd ..
+
+git switch -c "new-feature" 
+git branch 
+ls 
+
+
+touch file1.txt  
+ls
+echo "Hello i am file1"> file1.txt 
+cat file 1.txt 
+
+git add file1.txt 
+git commit -m "file 1 added" 
+git status 
+git push -u origin new-feature
+
+git log
+git log --oneline 
+
+cd .git 
+ls 
+cd refs 
+ls 
+cat main 
+cat bugfix 
+cat dev 
+cat new-feature 
+
+cd .. 
+cd .. 
+
+--------------------------------------------
+
+
+

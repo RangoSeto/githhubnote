@@ -1,0 +1,28 @@
+=>Pages (Deploy your project on Github for Free . HTML/CSS/JS project. Static Website)
+
+cd lesson3 
+mkdir githublesson11 
+
+git remote add origin git@github.com:MyaEiSan/githublesson11.git
+git remote -v 
+
+git status 
+git add .
+git commit -m "project added" 
+git status 
+git push -u orign main 
+
+
+Settings > click "Pages"
+Branch = main / (root)
+Click "Save" 
+
+Go to "Code" > click small yellow dot and click "Details" 
+wait to green mark 
+click "depoly" > Complete Job > https://myaeisan.github.io/githublesson11/
+
+--------------------------------------------
+
+
+
+
